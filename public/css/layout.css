@@ -73,6 +73,7 @@ body {
 
 .main {
   padding: 20px;
+  background: #efefef;
 }
 @media (min-width: 768px) {
   .main {
@@ -102,4 +103,34 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+
+
+
+
+
+
+.editor-container #editor-samples {
+    background: #ddd;
+    border-radius: 6px;
+    padding: 10px;
+}
+.editor-container #editor-storyboard {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+}
+.editor-container #editor-samples .editor-item {
+    cursor: move;
+    background: #eee;
+    padding: 10px;
+    margin: 10px;
+}
+.editor-container #editor-storyboard .editor-item {
+    cursor: move;
+    background: #777;
+    padding: 50px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px #aaa;
 }
