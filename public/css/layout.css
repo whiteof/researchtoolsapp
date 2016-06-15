@@ -134,3 +134,23 @@ body {
     margin: 10px;
     box-shadow: 2px 2px 10px #aaa;
 }
+
+
+
+
+
+.logo span {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 50px;
+}
+.logo img {
+    float: left;
+    margin-right: 10px;
+}
+.logo-blue {
+    color: #1e8fce;
+}
+.logo-grey {
+    color: #797b7b;
+}
