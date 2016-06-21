@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('Research Apps - '. $this->translate('Mobile Application for Your Clinical Research'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?php echo $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -13,7 +13,8 @@
         <!-- Le styles -->
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
                         ->prependStylesheet($this->basePath('css/layout.css'))
-                        ->prependStylesheet($this->basePath('dragula/dragula.min.css'))
+                        ->prependStylesheet($this->basePath('css/banner.css'))
+                        ->prependStylesheet($this->basePath('css/offcanvas.css'))
                         ->prependStylesheet($this->basePath('bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css'))
                         ->prependStylesheet($this->basePath('bootstrap-3.3.6/css/bootstrap.min.css')) ?>
 
@@ -32,39 +33,110 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!--<a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath('img/zf2-logo.png') ?>" alt="Zend Framework 2"/>&nbsp;<?php echo $this->translate('Skeleton Application') ?></a>-->
-                        <a class="navbar-brand logo" href="#">
-                            <img src="<?php echo $this->basePath('img/logo.png') ?>" height="50px"/>
-                            <span class="logo-blue">Research</span>
-                            <span class="logo-grey">Apps</span>
-                        </a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                          <li><a href="#">Dashboard</a></li>
-                          <li><a href="#">Settings</a></li>
-                          <li><a href="#">Profile</a></li>
-                          <li><a href="#">Help</a></li>
-                        </ul>
-                        <form class="navbar-form navbar-right">
-                          <input type="text" class="form-control" placeholder="Search...">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+		<div class="header">
+			<div class="container">
+				<!-- Static navbar -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<div class="contacts" id="contacts-right">
+								<img src="<?php echo $this->basePath('img/icon-contact.png') ?>" width="30px" height="30px" alt="Research App - Contact Us" />&nbsp;+1&nbsp;(347)&nbsp;575-6340
+							</div>
+							<a class="navbar-brand logo" href="<?php echo $this->url('home') ?>">
+                                <div class="logo-bar">
+                                    <img class="img-responsive" src="<?php echo $this->basePath('img/logo.png') ?>" alt="Research Apps"/>
+                                </div>
+                                <div class="title-bar">
+                                    <p>
+                                        <span class="logo-blue">Research</span>
+                                        <span class="logo-grey">Apps</span>
+                                    </p>
+                                    <p>
+                                        <span class="logo-slogan">mobile application for your clinical research</span>
+                                    </p>
+                                </div>
+							</a>
+							<div class="contacts" id="contacts-middle">
+								<img src="<?php echo $this->basePath('img/icon-contact.png') ?>" width="30px" height="30px" alt="Research App - Contact Us"/>&nbsp;+1&nbsp;(347)&nbsp;575-6340
+							</div>
+							
+						</div>				
+						<div class="contacts" id="contacts-top">
+							<img src="<?php echo $this->basePath('img/icon-contact.png') ?>" width="30px" height="30px" alt="Research App - Contact Us"/>&nbsp;+1&nbsp;(347)&nbsp;575-6340
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<!-- Top Menu -->
+                            <ul class="nav menu navbar-nav navbar-right">
+                                <li class="quote"><a href="#">Request a Quote</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Research Platform</a></li>
+                                <li class="singin"><a href="#">SING IN</a></li>
+                            </ul>
+						</div><!--/.nav-collapse -->
+						<div class="contacts" id="contacts-bottom">
+							<img src="<?php echo $this->basePath('img/icon-contact.png') ?>" width="30px" height="30px" alt="Research App - Contact Us"/>&nbsp;+1&nbsp;(347)&nbsp;575-6340
+						</div>
+					</div><!--/.container-fluid -->
+				</nav>
+			</div> <!-- /container -->
+		</div>
+		
         <?php echo $this->content; ?>
+				
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 footer-left">
+						<p><strong>Шоу-рум и установочный центр:</strong></p>
+						<p>г. Гродно, ул. Дзержинского, 23</p>
+						<p>
+							+375 29 231 77 14<br />
+							+375 44 470 01 95
+						</p>
+						<p><a href="mailto:info@comcar.by">info@comcar.by</a></p>
+						<p>&copy; 2016, Все права защищены.</p>
+					</div>
+					<div class="col-sm-4 footer-middle">
+                        <ul>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=1">Стальные защиты</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=2">Алюминиевые защиты</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=3">Амортизаторы капота</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=4">Навесное оборудование</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=5">Порог-площадки</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=6">Эксклюзив! 6мм алюминиевая защита</a></li>
+                            <li><a href="/index.php/component/wcatalog/?view=category&amp;id=7">Аксессуары для квадроциклов</a></li>
+                        </ul>
+					</div>
+					<div class="col-sm-4 footer-right">
+						<p>
+							<a href="/">
+								<img class="logo-bw" src="/templates/comcar/images/logo_bw.png" alt="Comcar - оптово-розничная продажа дополнительного оборудования для автомобилей и квадроциклов."/>
+							</a>
+						</p>
+                        <ul class="nav menu">
+                            <li class="item-103"><a href="/index.php/shipping" >Доставка и оплата</a></li><li class="item-104"><a href="/index.php/assembling" >Установка</a></li><li class="item-102"><a href="/index.php/about-us" >О компании</a></li></ul>
+
+												<p>&nbsp;</p>
+						<p>
+							<a href="http://vk.com/comcar_bel" class="social-links" target="_blank">
+								&rarr; мы Вконтакте
+								<img src="/templates/comcar/images/social_vk.png" alt="Comcar Вконтакте" />
+							</a>
+						</p>
+					</div>
+				</div>
+			
+			
+		</div>        
+        
+        
+        
         
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -73,7 +145,8 @@
         <?php
             echo $this->inlineScript()
                 ->prependFile($this->basePath('js/layout.js'))
-                ->prependFile($this->basePath('dragula/dragula.min.js'))
+                ->prependFile($this->basePath('js/banner.js'))
+                ->prependFile($this->basePath('js/offcanvas.js'))
                 ->prependFile($this->basePath('bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js'))
                 ->prependFile($this->basePath('bootstrap-3.3.6/js/holder.min.js'))
                 ->prependFile($this->basePath('bootstrap-3.3.6/js/bootstrap.min.js'))
