@@ -523,7 +523,7 @@ article.item-page iframe {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #aaa;
-  font-weight: 300;
+  font-weight: 200;
   border-top: 1px solid #dddcda;
 }
 .footer ul {
@@ -581,4 +581,15 @@ article.item-page iframe {
   .footer .footer-left, .footer .footer-middle, .footer .footer-right {
     margin-bottom: 20px;
   }
+}
+
+.message-container {
+    border: 1px solid #ddd;
+    border-left: 4px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+.message-danger {
+    border-left-color: #b22d2d;
+    color: #b22d2d;
 }

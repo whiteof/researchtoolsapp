@@ -12,7 +12,6 @@
 
         <!-- Le styles -->
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-						->prependStylesheet($this->basePath('css/user.css'))
                         ->prependStylesheet($this->basePath('css/layout.css'))
                         ->prependStylesheet($this->basePath('css/banner.css'))
                         ->prependStylesheet($this->basePath('css/offcanvas.css'))
@@ -94,9 +93,7 @@
 			</div> <!-- /container -->
 		</div>
 		
-		<div class="main-container">
-			<?php echo $this->content; ?>
-		</div>
+		<?php echo $this->content; ?>
 				
 		<div class="footer">
 			<div class="container">

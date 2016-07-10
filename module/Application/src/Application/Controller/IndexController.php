@@ -12,10 +12,23 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+use Zend\Authentication\AuthenticationService;
+
 class IndexController extends AbstractActionController
 {
+    /**
+     * @var \Zend\Authentication\AuthenticationService
+     */
+    protected $userAuthService;
+
+    public function __construct(AuthenticationService $userAuthService)
+    {
+        $this->userAuthService = $userAuthService;
+    }    
+    
     public function indexAction()
     {
+        $this->layout('layout/home');
         return new ViewModel();
     }
 }

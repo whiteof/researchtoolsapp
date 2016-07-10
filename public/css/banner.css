@@ -2,13 +2,20 @@
     overflow: hidden;
     background: #ccc;
 }
+.banner {
+    background: #ccc url('../img/banner.jpg');
+    height: 600px;
+}
+
+
+
 .banner .banner-bg {
     display: block;
     position: relative;
     z-index: -1;
 }
 #banner-bg {
-    display: none;
+    /*display: none;*/
 }
 .banner-bg-full-width {
     width: 100%;
@@ -28,14 +35,14 @@
     margin: auto;
 }
 .banner .top-bar {
-    height: 50px;
-    background: url('../images/black_65.png');
+    height: 200px;
+    background: url('../img/black_65.png');
 }
 .banner .middle-bar {
-    height: 300px;
+    height: 200px;
 }
 .banner .bottom-bar {
-    background: url('../images/black_65.png');
+    background: url('../img/black_65.png');
 }
 .banner h1 {
     color: #fff;

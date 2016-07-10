@@ -1,6 +1,9 @@
 jQuery(function($){
     $(window).load(function() {
         function resizeBanner() {
+            if ($('#banner-bg').height() > $('.banner').height()) {
+                $('#banner-bg').height($('.banner').height());
+            }
             var aspectRatioImg = $('#banner-bg').width() / $('#banner-bg').height();
             var aspectRatioBar = $('.banner').width() / $('.banner').height();
             if(aspectRatioImg > aspectRatioBar) {
@@ -19,10 +22,10 @@ jQuery(function($){
             $('.banner-menu-item').height(max_height);
             
         }
-        resizeBanner();
+        //resizeBanner();
         $(window).resize(function() {
-            resizeBanner();
+          //  resizeBanner();
         }).trigger("resize");
-        $('#banner-bg').fadeIn(200);
+        //$('#banner-bg').fadeIn(200);
     });
 });

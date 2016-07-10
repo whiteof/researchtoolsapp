@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="user-container">
+    
+        <h1><?php echo $this->translate('Sign in'); ?></h1>
+         
+        <?php
+        $form = $this->loginForm;
+        $form->prepare();
+        $form->setAttribute('action', $this->url('zfcuser/login'));
+        $form->setAttribute('method', 'post');
+        ?>
+         
+        <?php echo $this->form()->openTag($form) ?>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <?php $error_message = "" ?>
+                            <?php foreach ($form as $element) : ?>
+                    
+                                <div class="form-group <?php if ($this->formElementErrors($element)) echo "" ?>">
+                                    <?php
+                                        if ('submit' != $element->getAttribute('type')) { ?>
+                                            <label class="control-label"><?php echo $element->getLabel() ?></label>
+                                            <?php
+                                            $element->setAttribute('class', 'form-control')
+                                                    ->setAttribute('placeholder', $element->getLabel());
+                                            echo $this->formElement($element);
+                                        } else {
+                                            $element->setAttribute('class', 'btn btn-success');
+                                            $submitElement = $element;
+                                        }
+                                        
+                                        if ($this->formElementErrors($element)) : ?>
+                                            <?php
+                                            $error_message .= $this->formElementErrors()
+                                                ->setMessageOpenFormat('<span>')
+                                                ->setMessageSeparatorString('</span><span>')
+                                                ->setMessageCloseString('</span>')
+                                                ->render($element);
+                                            ?>
+                                        <?php endif; ?>
+                                </div>
+                             
+                            <?php endforeach; ?>
+                        </td>
+                    </tr>
+                </tbody>
+                <?php if(!empty($error_message)): ?>
+                    <thead>
+                        <tr>
+                            <td>
+                                <p class="message-container message-danger">
+                                    <?php echo $error_message ?>
+                                </p>
+                            </td>
+                        </tr>
+                    </thead>
+                <?php endif ?>
+            </table>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <?php echo $this->formElement($submitElement) ?>
+                </div>
+                <div class="col-sm-6 user-bar-signup">
+                    <a href=""><?php echo $this->translate('Forgot Password?'); ?></a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <?php if ($this->enableRegistration) : ?>
+                        <a class="user-link-signup" href="<?php echo $this->url('zfcuser/register') . ($this->redirect ? '?redirect='.$this->redirect : '') ?>"><?php echo $this->translate('Sign Up!'); ?></a>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+        <?php echo $this->form()->closeTag() ?>
+        
+    </div>      
+</div>
