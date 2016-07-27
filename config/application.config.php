@@ -14,7 +14,10 @@ return array(
         'ZfcUser',
         'ZfcUserDoctrineORM',
         'Application',
-        'User'
+        'User',
+        'ZF\ApiProblem',
+        'ZF\ContentNegotiation',
+        'ZF\OAuth2'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
