@@ -1,0 +1,10 @@
+.slogan-section {
+    background: #e3ecf0;
+}
+.slogan-section .bar {
+    background: url('../img/banner-bg.png') no-repeat right center;
+    height: 700px;
+}
+.slogan-section .bar h2, .slogan-section .bar h3 {
+    margin: 0px;
+}
