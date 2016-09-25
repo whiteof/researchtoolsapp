@@ -1,10 +1,48 @@
 .slogan-section {
-    background: #e3ecf0;
+    background: #e9f4f9 url('../img/container_bg.png') no-repeat left center;
+    background-size: 555px 350px;
+    position: relative;
+    box-shadow: 0px 1px 3px #ccc;    
 }
 .slogan-section .bar {
     background: url('../img/banner-bg.png') no-repeat right center;
-    height: 700px;
+    background-size: 900px 450px;
+    height: 350px;
 }
 .slogan-section .bar h2, .slogan-section .bar h3 {
     margin: 0px;
+}
+.slogan-section .bar h2 {
+    padding: 20px 20px 40px 20px;
+    font-size: 50px;
+    font-weight: 800;
+    color: #1e8fce;
+    line-height: 1em;
+}
+.slogan-section .bar h2 small {
+    font-weight: 300;
+    font-size: 24px;
+}
+.slogan-section .bar h2 span {
+    font-weight: 300;
+    font-size: 38px;
+}
+.slogan-section .bar h3 {
+    background: url('../img/line.png') no-repeat left top;
+    padding: 10px 20px 10px 20px;
+    font-weight: 300;
+    color: #777;
+}
+.slogan-section .bar .icons {
+    padding-left: 20px;
+}
+.slogan-section .bar .icons img.researchkit-icon {
+    height: 50px;
+    float: left;
+    margin-right: 30px;
+}
+.slogan-section .bar .icons img.platform-icon {
+    height: 50px;
+    float: left;
+    margin-right: 30px;
 }
