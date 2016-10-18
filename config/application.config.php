@@ -13,6 +13,7 @@ return array(
         'ZfcBase',
         'ZfcUser',
         'ZfcUserDoctrineORM',
+        'Api',
         'Application',
         'User',
         'ZF\ApiProblem',
